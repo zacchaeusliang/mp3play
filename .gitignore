@@ -9,4 +9,4 @@
 /build
 /captures
 .externalNativeBuild
-mp3play/res/raw
+!mp3play/app/src/main/res/raw
