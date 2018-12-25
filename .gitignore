@@ -8,5 +8,6 @@
 .DS_Store
 /build
 /captures
+/raw
 .externalNativeBuild
 !mp3play/app/src/main/res/raw
