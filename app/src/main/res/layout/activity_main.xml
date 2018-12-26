@@ -8,24 +8,70 @@
     tools:layout_editor_absoluteY="81dp">
 
     <Button
-        android:id="@+id/button_id"
-        android:layout_width="102dp"
+        android:id="@+id/balanced"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="389dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
         android:text="Balanced"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/soprano"
-        app:layout_constraintTop_toBottomOf="@+id/soprano" />
+        app:layout_constraintBottom_toTopOf="@+id/soprano"
+        app:layout_constraintEnd_toEndOf="@+id/piano"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/piano" />
+
+    <Button
+        android:id="@+id/piano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4dp"
+        android:text="piano only"
+        app:layout_constraintBottom_toTopOf="@+id/balanced"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    //app:layout_constraintBottom_toTopOf="@+id/button_id"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/soprano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="32dp"
-        android:text="soprano"
-        app:layout_constraintBottom_toTopOf="@+id/button_id"
+        android:layout_marginBottom="12dp"
+        android:text="soprano "
+        app:layout_constraintBottom_toTopOf="@+id/alto"
+        app:layout_constraintStart_toStartOf="@+id/balanced"
+        app:layout_constraintTop_toBottomOf="@+id/balanced" />
+
+    <Button
+        android:id="@+id/alto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="281dp"
+        android:text="Alto"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/soprano" />
+
+    <Button
+        android:id="@+id/tenor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="13dp"
+        android:text="tenor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alto" />
+
+    <Button
+        android:id="@+id/bass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Bass"
+        app:layout_constraintEnd_toEndOf="@+id/tenor"
+        app:layout_constraintTop_toBottomOf="@+id/tenor" />
 </android.support.constraint.ConstraintLayout>
