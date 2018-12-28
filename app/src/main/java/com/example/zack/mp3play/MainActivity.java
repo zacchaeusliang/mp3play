@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         final Button tenor = findViewById(R.id.tenor);
         final Button bass = findViewById(R.id.bass);
 
-        mPlayer = MediaPlayer.create(this, R.raw.altolamb);
+        mPlayer = MediaPlayer.create(this, R.raw.lambalanced);
         mPlayer2 = MediaPlayer.create(this, R.raw.lambpiano);
-        mPlayer3 = MediaPlayer.create(this, R.raw.lambpiano);
-        mPlayer4 = MediaPlayer.create(this, R.raw.lambpiano);
-        mPlayer5 = MediaPlayer.create(this, R.raw.lambpiano);
-        mPlayer6 = MediaPlayer.create(this, R.raw.lambpiano);
+        mPlayer3 = MediaPlayer.create(this, R.raw.lambsoprano);
+        mPlayer4 = MediaPlayer.create(this, R.raw.lamalto);
+        mPlayer5 = MediaPlayer.create(this, R.raw.lambtenor);
+        mPlayer6 = MediaPlayer.create(this, R.raw.lambbass);
         balanced .setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("hello");
