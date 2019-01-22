@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_sounds">
+        <item>@raw/lambbass</item>
+    </string-array>
+</resources>

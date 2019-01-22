@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectpart"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -11,11 +12,12 @@
         android:id="@+id/balanced"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
         android:text="Balanced"
         app:layout_constraintBottom_toTopOf="@+id/soprano"
         app:layout_constraintEnd_toEndOf="@+id/piano"
+        app:layout_constraintEnd_toStartOf="@+id/selectparts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/piano" />
 
@@ -74,4 +76,28 @@
         android:text="Bass"
         app:layout_constraintEnd_toEndOf="@+id/tenor"
         app:layout_constraintTop_toBottomOf="@+id/tenor" />
+
+    <Button
+        android:id="@+id/jumptobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="4dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/piano"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/selectparts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:text="Select part"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/balanced"
+        app:layout_constraintTop_toBottomOf="@+id/jumptobar" />
+
 </android.support.constraint.ConstraintLayout>
