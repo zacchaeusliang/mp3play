@@ -28,9 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
         MediaPlayer[] players = new MediaPlayer[2];
         int [] songs = {R.raw.lambsoprano ,R.raw.lamalto,R.raw.lambtenor,R.raw.lambbass};
+
         for(int i=0;i<2;i++){
             players[i]= MediaPlayer.create(this, songs[i]);
+
         }
+       // players
 
 
 
@@ -48,10 +51,12 @@ public class MainActivity extends AppCompatActivity {
         int [] songs = {R.raw.lambsoprano ,R.raw.lamalto,R.raw.lambtenor,R.raw.lambbass};
 
 
+
         for(int i=0;i<4;i++){
             if(toplay[i]==true){
                 for(int j=0;j<2;j++){
                     players[j]= MediaPlayer.create(this, songs[i]);
+
 
                 }
             }
@@ -59,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        float log1=(float)(Math.log(100-40)/Math.log(40));
+        float log2=(float)(Math.log(100-60)/Math.log(60));
+            players[0].setVolume(log1,log1);
+            players[1].setVolume(log2,log2);
 
         PlayThread[] playThreads = new PlayThread[2];
         for (int i = 0; i < 2; i++)
@@ -142,15 +151,15 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("hello");
                 // Code here executes on main thread after user presses button
                 if (playstate == 0) {
-                    mPlayer2.seekTo(0);
-                    mPlayer2.start();
+                    mPlayer5.seekTo(0);
+                    mPlayer5.start();
                     playstate = 1;
 
                 } else {
-                    mPlayer2.stop();
+                    mPlayer5.stop();
                     playstate = 0;
                     try {
-                        mPlayer2.prepare();
+                        mPlayer5.prepare();
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -166,15 +175,15 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("hello");
                 // Code here executes on main thread after user presses button
                 if (playstate == 0) {
-                    mPlayer2.seekTo(0);
-                    mPlayer2.start();
+                    mPlayer3.seekTo(0);
+                    mPlayer3.start();
                     playstate = 1;
 
                 } else {
-                    mPlayer2.stop();
+                    mPlayer3.stop();
                     playstate = 0;
                     try {
-                        mPlayer2.prepare();
+                        mPlayer3.prepare();
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -190,63 +199,15 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("hello");
                 // Code here executes on main thread after user presses button
                 if (playstate == 0) {
-                    mPlayer2.seekTo(0);
-                    mPlayer2.start();
+                    mPlayer4.seekTo(0);
+                    mPlayer4.start();
                     playstate = 1;
 
                 } else {
-                    mPlayer2.stop();
+                    mPlayer4.stop();
                     playstate = 0;
                     try {
-                        mPlayer2.prepare();
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                }
-
-
-            }
-        });
-//        alto.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                System.out.println("hello");
-//                // Code here executes on main thread after user presses button
-//                if (playstate == 0) {
-//                    mPlayer2.seekTo(0);
-//                    mPlayer2.start();
-//                    playstate = 1;
-//
-//                } else {
-//                    mPlayer2.stop();
-//                    playstate = 0;
-//                    try {
-//                        mPlayer2.prepare();
-//
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                }
-//
-//
-//            }
-//        });
-        tenor.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                System.out.println("hello");
-                // Code here executes on main thread after user presses button
-                if (playstate == 0) {
-                    mPlayer2.seekTo(0);
-                    mPlayer2.start();
-                    playstate = 1;
-
-                } else {
-                    mPlayer2.stop();
-                    playstate = 0;
-                    try {
-                        mPlayer2.prepare();
+                        mPlayer4.prepare();
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -260,30 +221,32 @@ public class MainActivity extends AppCompatActivity {
 
         bass.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 System.out.println("hello");
-                init();
                 // Code here executes on main thread after user presses button
-             /*   if (playstate == 0) {
-                    mPlayer2.seekTo(0);
-                    mPlayer2.start();
+                if (playstate == 0) {
+                    mPlayer6.seekTo(0);
+                    mPlayer6.start();
                     playstate = 1;
 
                 } else {
-                    mPlayer2.stop();
+                    mPlayer6.stop();
                     playstate = 0;
                     try {
-                        mPlayer2.prepare();
+                        mPlayer6.prepare();
 
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
 
-                }*/
+                }
 
 
             }
         });
+
+
+
+
         selectparts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
